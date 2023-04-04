@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
+/*   By: superbia <superbia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 12:14:36 by osericol          #+#    #+#             */
-/*   Updated: 2023/03/30 12:31:38 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/04 19:41:43 by superbia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 
+#ifndef _LIBFT_H
+#define _LIBFT_H
+
+#include <stdlib.h>
 
 int ft_isalpha(int c);
 
@@ -41,7 +44,7 @@ int ft_toupper(int c);
 
 int ft_tolower(int c);
 
-char *strchr(const char *str, int c);
+char *ft_strchr(const char *str, int c);
 
 char *ft_strrchr(const char *s, int c);
 
@@ -55,7 +58,7 @@ void ft_memchr(const void *s, int c, size_t n);
 
 void ft_memcmp(const void *s1, const void *s2, size_t n);
 
-char ft_strdup(const char *s1);
+char *ft_strdup(const char *s1);
 
 void *ft_calloc(size_t count, size_t size);
 
@@ -66,3 +69,7 @@ char *ft_strjoin(char const *s1, char const *s2);
 char *ft_strtrim(char const *s1, char const *set);
 
 char **ft_split(char const *s, char c);
+
+char *ft_itoa(int n);
+
+#endif

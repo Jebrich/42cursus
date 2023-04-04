@@ -6,13 +6,19 @@
 /*   By: superbia <superbia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 18:39:17 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/04 16:08:12 by superbia         ###   ########.fr       */
+/*   Updated: 2023/04/04 20:05:54 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 #include <stdio.h>
-char* ft_itoa(int n) {
+
+char *ft_itoa(int n) {
+
+     if (n == -2147483648)
+        return (ft_strdup("-2147483648"));
+
     // Determine the length of the resulting string
     int length = 0;
     int temp = n;
@@ -43,15 +49,4 @@ char* ft_itoa(int n) {
     }
     
     return result;
-}
-
-
-int main()
-{
-int n = -2147483647;
-
-printf("%s", ft_itoa(n));
-
-
-return (0);
 }
