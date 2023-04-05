@@ -6,7 +6,7 @@
 /*   By: superbia <superbia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 12:14:36 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/04 19:41:43 by superbia         ###   ########.fr       */
+/*   Updated: 2023/04/05 10:49:27 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #define _LIBFT_H
 
 #include <stdlib.h>
+
+int ft_islower(int c); // function add by me to test antoher function
 
 int ft_isalpha(int c);
 
@@ -71,5 +73,11 @@ char *ft_strtrim(char const *s1, char const *set);
 char **ft_split(char const *s, char c);
 
 char *ft_itoa(int n);
+
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+void ft_putchar_fd(char c, int fd);
 
 #endif
