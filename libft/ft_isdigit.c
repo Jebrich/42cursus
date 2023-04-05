@@ -6,16 +6,16 @@
 /*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 12:45:21 by osericol          #+#    #+#             */
-/*   Updated: 2023/03/28 14:01:17 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/05 15:31:38 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if (c >= '0' && c <= '9')
-        return (1);
-    else
-        return (0);
-} 
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
+}

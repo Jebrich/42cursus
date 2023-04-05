@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: osericol <osericol@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/05 09:30:59 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/05 09:44:21 by osericol         ###   ########.fr       */
+/*   Created: 2023/04/05 14:48:07 by osericol          #+#    #+#             */
+/*   Updated: 2023/04/05 16:25:34 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-int ft_islower(int c)
+void	ft_putstr_fd(char *s, int fd)
 {
- if( c >= 97 && c <= 122)
- {
-	return (1);
- }
- else
-	return (0);
+	write(fd, s, ft_strlen(s));
 }

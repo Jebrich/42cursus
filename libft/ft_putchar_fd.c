@@ -6,13 +6,14 @@
 /*   By: osericol <osericol@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 10:46:05 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/05 10:48:32 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/05 16:22:49 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

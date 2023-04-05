@@ -6,47 +6,76 @@
 /*   By: superbia <superbia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 18:39:17 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/04 20:05:54 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/05 15:56:53 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
-char *ft_itoa(int n) {
+static void	ft_swap(char *a, char *b)
+{
+	char	tmp;
 
-     if (n == -2147483648)
-        return (ft_strdup("-2147483648"));
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
 
-    // Determine the length of the resulting string
-    int length = 0;
-    int temp = n;
-    while (temp != 0) {
-        length++;
-        temp /= 10;
-    }
-    if (n < 0) {
-        length++; // Add one extra character for the '-' sign
-        temp = -n;
-    } else {
-        temp = n;
-    }
-    
-    // Allocate memory for the string
-    char* result = malloc(length + 1);
-    result[length] = '\0';
-    
-    // Convert the integer to a string
-    int i = length - 1;
-    while (temp != 0) {
-        result[i] = '0' + (temp % 10);
-        temp /= 10;
-        i--;
-    }
-    if (n < 0) {
-        result[0] = '-';
-    }
-    
-    return result;
+static char	*ft_strrev(char *str)
+{
+	char	*start;
+	char	*end;
+
+	start = str;
+	end = str;
+	while (*(end + 1))
+		end++;
+	while (end > start)
+		ft_swap(start++, end--);
+	return (str);
+}
+
+static int	get_buffer_size(int n)
+{
+	int	size;
+
+	size = 1;
+	if (n == 0)
+		return (2);
+	if (n < 0)
+		size++;
+	while (n != 0)
+	{
+		n /= 10;
+		size++;
+	}
+	return (size);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+	int		i;
+	int		sign;
+
+	i = 0;
+	sign = 1;
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	if (n < 0)
+		sign = -1;
+	str = malloc(sizeof(char) * get_buffer_size(n));
+	if (!str)
+		return (NULL);
+	while (n / 10 != 0)
+	{
+		str[i++] = (sign * n) % 10 + '0';
+		n /= 10;
+	}
+	str[i++] = (sign * n) % 10 + '0';
+	if (sign == -1 && i != 0)
+		str[i++] = '-';
+	str[i] = '\0';
+	return (ft_strrev(str));
 }
