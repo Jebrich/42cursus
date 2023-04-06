@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_ft.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: osericol <osericol@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 14:57:45 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/05 16:29:19 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/06 16:26:44 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-void	ft_putnbr_ft(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	char	num[11];
 	int		i;
