@@ -6,7 +6,7 @@
 /*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 14:51:54 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/05 16:52:18 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/07 14:29:26 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	j = 0;
 	k = 0;
+	if (dstsize == 0)
+		return (0);
 	while (dst[i] != '\0')
 		i++;
 	while (src[j] != '\0')

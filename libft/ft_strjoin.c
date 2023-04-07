@@ -6,7 +6,7 @@
 /*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 12:16:50 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/05 16:48:32 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/07 17:40:01 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len2;
 	char	*str;
 
+	if (!s1 || !s2)
+		return (NULL);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	str = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
-	if (str == NULL)
+	if (!str)
 	{
 		return (NULL);
 	}

@@ -6,7 +6,7 @@
 /*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 16:02:51 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/05 17:07:14 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/07 17:14:10 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	size_t	i;
 
+	if (!s1)
+		return (NULL);
 	start = 0;
 	while (s1[start] && char_set(s1[start], set))
 		start++;

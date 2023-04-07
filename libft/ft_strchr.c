@@ -3,21 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
+/*   By: osericol <osericol@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/27 15:02:00 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/06 16:34:54 by osericol         ###   ########.fr       */
+/*   Created: 2023/04/07 13:02:51 by osericol          #+#    #+#             */
+/*   Updated: 2023/04/07 14:12:55 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchr(const char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	while (*str != (char)c)
+	char	*runner;
+
+	runner = (char *) s;
+	while (*runner)
 	{
-		if (!*str++)
-			return (NULL);
+		if (*runner == (char) c)
+			return (runner);
+		runner++;
 	}
-	return ((char *)str);
+	if (*runner == (char) c)
+		return (runner);
+	return (NULL);
 }

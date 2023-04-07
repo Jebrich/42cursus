@@ -6,7 +6,7 @@
 /*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 14:17:13 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/05 16:18:15 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/06 21:44:12 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (!src && !dst)
+		return (NULL);
 	while (i < n)
 	{
 		((char *)dst)[i] = ((char *)src)[i];
