@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
+/*   By: superbia <superbia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 14:51:54 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/07 14:29:26 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/08 19:16:40 by superbia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,29 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	size_t	j;
-	size_t	k;
+	char		*dst_ptr;
+	const char	*src_ptr;
+	size_t		dst_len;
+	size_t		len;
 
-	i = 0;
-	j = 0;
-	k = 0;
-	if (dstsize == 0)
-		return (0);
-	while (dst[i] != '\0')
-		i++;
-	while (src[j] != '\0')
-		j++;
-	if (dstsize <= i)
-		j += dstsize;
-	else
-		j += i;
-	while (src[k] != '\0' && i + 1 < dstsize)
+	dst_ptr = dst;
+	src_ptr = src;
+	len = dstsize;
+	while (len-- && *dst_ptr)
+		dst_ptr++;
+	dst_len = dst_ptr - dst;
+	len = dstsize - dst_len;
+	if (len == 0)
+		return (dst_len + ft_strlen(src_ptr));
+	while (*src_ptr)
 	{
-		dst[i] = src[k];
-		i++;
-		k++;
+		if (len != 1)
+		{
+			*dst_ptr++ = *src_ptr;
+			len--;
+		}
+		src_ptr++;
 	}
-	dst[i] = '\0';
-	return (j);
+	*dst_ptr = '\0';
+	return (dst_len + (src_ptr - src));
 }

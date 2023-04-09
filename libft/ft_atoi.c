@@ -6,34 +6,44 @@
 /*   By: superbia <superbia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 17:15:28 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/07 16:50:35 by superbia         ###   ########.fr       */
+/*   Updated: 2023/04/08 19:50:50 by superbia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_isspace(char ch)
+{
+	if (ch == ' ' || ch == '\f' || ch == '\n' \
+	|| ch == '\r' || ch == '\t' || ch == '\v')
+		return (1);
+	return (0);
+}
+
 int	ft_atoi(const char *str)
 {
-	int	sign;
-	int	result;
+	const char	*ptr;
+	int			sign;
+	int			result;
 
+	ptr = str;
 	sign = 1;
 	result = 0;
-	while (*str == ' ' || *str == '\t' || *str == '\n'
-		|| *str == '\v' || *str == '\f' || *str == '\r')
+	while (ft_isspace(*ptr))
+		ptr++;
+	if (*ptr == '+')
 	{
-		str++;
+		ptr++;
 	}
-	while (*str == '-' || *str == '+')
+	else if (*ptr == '-')
 	{
-		if (*str == '-')
-			sign *= -1;
-		str++;
+		sign *= -1;
+		ptr++;
 	}
-	while (*str >= '0' && *str <= '9' && *str != '\0')
+	while (*ptr >= '0' && *ptr <= '9')
 	{
-		result = (result * 10) + (*str - '0');
-		str++;
+		result = (result * 10) + (*ptr - '0');
+		ptr++;
 	}	
 	return (result * sign);
 }
