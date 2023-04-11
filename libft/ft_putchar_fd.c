@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: osericol <osericol@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 10:46:05 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/05 16:22:49 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/11 14:45:54 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)

@@ -6,12 +6,11 @@
 /*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 15:18:55 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/05 17:00:20 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/11 14:45:30 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 char	*ft_strrchr(const char *s, int c)
 {

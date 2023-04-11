@@ -6,15 +6,12 @@
 /*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 12:31:16 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/05 16:40:53 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/11 14:45:49 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-// This function counts words
 int	count_words(char const *str, char c)
 {
 	int	i;

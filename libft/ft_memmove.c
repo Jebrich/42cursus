@@ -6,11 +6,11 @@
 /*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 16:19:47 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/07 14:34:06 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/11 14:41:26 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
-#include <stdlib.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

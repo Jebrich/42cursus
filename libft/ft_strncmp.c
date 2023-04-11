@@ -6,12 +6,11 @@
 /*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 15:21:06 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/05 16:56:46 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/11 14:45:32 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

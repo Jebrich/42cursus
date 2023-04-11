@@ -6,12 +6,11 @@
 /*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 17:17:16 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/05 16:12:57 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/11 14:45:58 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

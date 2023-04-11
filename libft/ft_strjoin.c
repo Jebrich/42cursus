@@ -6,11 +6,10 @@
 /*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 12:16:50 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/07 17:40:01 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/11 14:45:41 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
