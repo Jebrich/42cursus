@@ -6,47 +6,33 @@
 /*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 16:02:51 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/11 14:45:28 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/11 15:09:11 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	char_set(char c, char const *set)
-{
-	size_t	i;
-
-	i = 0;
-	while (set[i])
-	{
-		if (set[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
-}
+#include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*new;
+	char	*str;
 	size_t	start;
 	size_t	end;
-	size_t	i;
+	size_t	len;
 
 	if (!s1)
 		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
 	start = 0;
-	while (s1[start] && char_set(s1[start], set))
-		start++;
 	end = ft_strlen(s1);
-	while (end > start && char_set(s1[end - 1], set))
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	while (end > start && ft_strchr(set, s1[end]))
 		end--;
-	new = (char *)malloc(sizeof(*s1) * (end - start + 1));
-	if (!new)
+	len = end - start;
+	str = ft_substr(s1, start, len + 1);
+	if (!str)
 		return (NULL);
-	i = 0;
-	while (start < end)
-		new[i++] = s1[start++];
-	new[i] = 0;
-	return (new);
+	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: osericol <osericol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 08:44:27 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/11 14:45:34 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/11 15:27:09 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,20 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*s2;
-	size_t	len;
-	size_t	i;
+	unsigned int	i;
+	char			*str;
 
 	i = 0;
-	if (!s)
+	if (!s || !f)
 		return (NULL);
-	len = ft_strlen(s);
-	s2 = malloc((len + 1) * sizeof(char));
-	if (!s2)
+	str = (char *)malloc(ft_strlen(s) + 1);
+	if (!str)
 		return (NULL);
-	while (i < len)
+	while (s[i] != '\0')
 	{
-		s2[i] = f(i, s[i]);
+		str[i] = f(i, s[i]);
 		i++;
 	}
-	s2[len] = '\0';
-	return (s2);
+	str[i] = '\0';
+	return (str);
 }
