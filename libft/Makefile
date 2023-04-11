@@ -12,7 +12,7 @@
 
 NAME = libft.a
 
-HEADER = $(NAME:.a=.hs)
+HEADER = $(NAME:.a=.h)
 
 SOURCES = ft_isalpha.c \
 ft_isdigit.c \
