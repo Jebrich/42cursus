@@ -6,7 +6,7 @@
 /*   By: osericol <osericol@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 12:58:09 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/24 15:49:18 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/24 17:33:32 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 char    *get_next_line(int fd, char **line)
 {
-
-
-
     return (line);
 }
