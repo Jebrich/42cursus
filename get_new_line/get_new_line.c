@@ -6,13 +6,15 @@
 /*   By: osericol <osericol@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 12:58:09 by osericol          #+#    #+#             */
-/*   Updated: 2023/04/24 17:33:32 by osericol         ###   ########.fr       */
+/*   Updated: 2023/04/26 11:52:16 by osericol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-char    *get_next_line(int fd, char **line)
+// write function that will read from file descriptor and return line
+char    *get_next_line(int fd) 
 {
-    return (line);
+    char *line;
+    
+    return (line); 
 }
