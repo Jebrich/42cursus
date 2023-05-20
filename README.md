@@ -14,7 +14,7 @@ Contributing
 While this repository is primarily intended as a showcase of the user's work, contributions and feedback are welcome. If you notice any issues with the code or have suggestions for improvements, please feel free to open an issue or submit a pull request.
 
 License
-All code in this repository is licensed under the MIT license. See the LICENSE file for more information.
+All code in this repository is licensed under the 42 license. See the LICENSE file for more information.
 
 Disclaimer
 The projects in this repository were completed by the user "Jebrich" as part of the 42 school's curriculum. While the projects have been reviewed and graded by the 42 school staff, they may contain errors or suboptimal solutions. The projects are provided as-is, without any warranty or guarantee of correctness or suitability for any particular purpose. Use at your own risk.
